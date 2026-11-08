@@ -1,0 +1,72 @@
+{
+    // Posición y dimensiones de la barra
+    "layer": "top",
+    "position": "top", // Puede ser: top, bottom, left, right
+    "height": 30,
+    "spacing": 4,
+
+    // Distribución de módulos por zonas
+    "modules-left": [
+        "hyprland/workspaces", // O "sway/workspaces", "niri/workspaces", etc.
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "cpu",
+        "memory",
+        "battery",
+        "tray"
+    ],
+
+    // --- Configuración individual de cada módulo ---
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{name}",
+        "on-click": "activate"
+    },
+
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "cpu": {
+        "format": "CPU: {usage}%",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "RAM: {}%"
+    },
+
+    "network": {
+        "format-wifi": "WiFi: {essid} ({signalStrength}%)",
+        "format-ethernet": "ETH: {ipaddr}/{cidr}",
+        "format-disconnected": "Desconectado"
+    },
+
+    "pulseaudio": {
+        "format": "Vol: {volume}%",
+        "format-muted": "Mute",
+        "on-click": "pavucontrol"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "Bat: {capacity}%",
+        "format-charging": "Cargando: {capacity}%"
+    },
+
+    "tray": {
+        "spacing": 10
+    }
+}

@@ -1,0 +1,13 @@
+require("modules.monitors")
+require("modules.environment")
+require("modules.appearance")
+require("modules.layouts")
+require("modules.input")
+require("modules.keybindings")
+require("modules.windows")
+
+hl.on("hyprland.start", function ()
+    hl.exec_cmd("uwsm app -- waybar")
+    hl.exec_cmd("~/.config/hypr/scripts/random-wallpaper.sh")
+    hl.exec_cmd("hypridle")
+end)
