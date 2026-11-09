@@ -3,7 +3,7 @@
 set -euo pipefail
 
 script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-wallpaper_dir="$script_dir/../../img"
+wallpaper_dir="$HOME/.config/img"
 queue_file="$wallpaper_dir/queue.txt"
 
 touch "$queue_file"
