@@ -21,5 +21,6 @@
           (lambda ()
             (define-key vterm-mode-map (kbd "C-j") #'vterm-send-down)))
 
+(load! "myconfigs/general")
+(load! "myconfigs/org-agenda")
 (load! "myconfigs/denote")
-(load! "myconfigs/org")
